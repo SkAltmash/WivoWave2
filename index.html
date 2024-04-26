@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivo Wave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contnear">
+    <div class="loginPage">
+    <div id="Singup">
+    <div id="logo"> <img src="logo.png" alt=""> </div>
+    <h2>Create Account</h2>
+    <div class="elemet-lp"><p>Your Name</p>  
+    <input type="text" id="username" placeholder="First and last name "> <p id="usernameerror" class="error"> </p></div>
+    
+    <div class="elemet-lp"><p>Mobile No</p>
+    <input type="number" id="mobile" placeholder="Mobile number"> <p id="mobileerror" class="error"></p></div>
+     <div class="elemet-lp"><p>Password </p>
+    <input type="password" id="password" placeholder="At lest 6 characters" > <p id="passworderror" class="error"></p></div>
+     <button id="submitbt" onclick="main()">Verify mobile number</button>
+
+     <p id="potp">To verify your number, we will send you a text message <br>
+        with a temporary code. Message and data rates may apply.</p>
+    <div id="switc">
+     <p id="potp1">  Already have an account?</p>
+     <button id="loginbt" onclick="loginpage()">log in</button>
+     </div>
+     
+    </div>  
+    <div id="mobileverify">
+        <div id="logo"> <img src="logo.png" alt=""> </div>
+        <h3>Verify mobile number</h3>
+        <div class="elemet-lp"><p id="mobileotp"></p> <input type="number" id="otp"><p class="error" id="otperror"></p> </div>
+        <div><button id="Createaccount" onclick="votp()">Create Account</button></div>
+        <div id="potp3"><div>Not received your code?</div> <div> <button id="time" onclick="resend()"></button></div></div>
+    </div>
+     <div id="login">
+    <div id="logo"> <img src="logo.png" alt=""> </div>
+      <h2>Sign in</h2>
+      <div class="elemet-lp"><p>Email or mobile phone number</p>  
+        <input type="text" id="username1"> <p id="usernameerror1" class="error"> </p></div>
+        <div class="elemet-lp"><p>Password</p>
+        <input type="password" id="password1" ><p id="passworderror1" class="error"></p></div>
+        <button id="submitbt" onclick="main1()">Continue</button>
+        <div id="switc">
+        <p id="potp1">  Don't  have an account?</p>
+        <button id="loginbt" onclick="singuppage()">Sign in</button>
+     </div>
+     </div>
+    </div>
+    <div class="mainwebsit">
+        <header>
+        <div class="logo2"> Vivo Wave</div>
+        <div class="hamburger">
+            <button onclick="hamburgercall()" id="hamburgerbt"><i class="fa-solid fa-bars" style="color: #fefefe;"></i>  </button>  
+        </div>
+     <nav class="nav-bar"> 
+        <ul>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="https://www.bewakoof.com">About</a>
+            </li>
+            <li>
+                <button id="logout" onclick="deletedata()">log out</button>
+            </li>
+            <li>
+                <p id="userid"></p>
+            </li>
+            <li>
+                <button id="cart" onclick="displaycart()"><i class="fa-solid fa-cart-shopping"></i></button>
+            </li>
+            
+        </ul>
+        </nav>
+    </header>
+     <div id="cartitem">
+     
+        <div id="cartitemdiv">
+           <div id="emptydiv"><img src="empty.png" id="empty"></div> 
+        </div>
+        <footer id="remocart">
+            <button id="removecartdata" onclick="removecartdata()">remove all</button>
+          <button id="total">place order <button>
+        </footer>
+    </div>
+    <div id="imgcontain">
+        <div id="leftbt"><button onclick="prve()" id="leftbts"><i class="fa-solid fa-arrow-left"></i></button></div>
+       <div class="main">
+        <img src="assict/banner/b1.jpg" class="slide" >
+        <img src="assict/banner/b2.jpg" class="slide" >
+         <img src="assict/banner/b3.jpg" class="slide" >
+         <img src="assict/banner/b1.jpg" class="slide" >
+         <img src="assict/banner/b4.jpg" class="slide" >
+          <img src="assict/banner/b5.jpg" class="slide" >
+        </div>
+        <div id="rightbt"><button onclick="next()"><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+    <div id="catlogs">
+    <h1 id="men">Men's Clothing</h1>
+     <div id="catlog-area" class="catlog-area1" >
+        <div  class="catlog-row" id="catlog-first-row">
+        <div class="catlog"><img src="assict/tshirt/t1.webp" onclick="c(1,1,450)"> <div style="padding: 10px;">VivowaveX DC <br>
+        Mens black the batman<h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div></div>
+        <div class="catlog"><img src="assict/tshirt/t2.webp" onclick="c(1,2,450)" ><div>VivowaveX DC <br>
+            Men's White Marvel Ironman <h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog"><img src="assict/tshirt/t3.webp" onclick="c(1,3,450)"><div>VivowaveX Marvel <br>
+            Mens black the batman<h3>Rs 499 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog"><img src="assict/tshirt/t4.webp" onclick="c(1,4,450)"><div>VivowaveX DC <br>
+            Mens black the batman<h3>Rs 299 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog" id="more"><h2>Get more...</h2></div>
+        </div>
+    </div>
+    <h1 id="women">Women's Clothing</h1>
+    <div id="catlog-area">
+        <div  class="catlog-row" id="catlog-first-row">
+        <div class="catlog"><img src="assict/wweres/w1.webp" onclick="c(2,1,450)"><div >VivowaveX DC <br>
+            Mens black the batman<h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog"><img src="assict/wweres/w2.webp"onclick="c(2,2,450)"> <div>VivowaveX DC <br>
+            Mens black the batman<h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog"> <img src="assict/wweres/w3.webp" onclick="c(2,3,450)"><div>VivowaveX DC <br>
+            Mens black the batman<h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog"><img src="assict/wweres/w4.webp" onclick="c(2,4,450)"> <div>VivowaveX DC <br>
+            Mens black the batman<h3>Rs 399 <p style="color: rgb(133, 214, 133);">69% Off</p></h3></div> </div>
+        <div class="catlog" id="more"><h2>Get more...</h2></div>
+        </div>
+    </div>
+    </div>
+    <div id="Products">
+        <div id="product-image"></div>
+        <div id="catlog-area-product">
+            <div  class="catlog-row-product" id="catlog-first-row-product">
+            <div class="catlog-product" id="one" onclick="big(1)"></div>
+            <div class="catlog-product" id="two"  onclick="big(2)"> </div>
+            <div class="catlog-product" id="three" onclick="big(3)"> </div>
+            <div class="catlog-product" id="four" onclick="big(4)"> </div>
+            <div class="catlog-product" id="five" onclick="big(5)"> </div>
+            </div>
+            </div>
+            <div id="addtocart"> <button onclick="additem()"> <p id="price">ADD TO CART</p></button>
+                <button onclick="displaycart()">Go to cart</button></div>
+        <button onclick="backtohome()">back</button>
+    </div>
+
+     <footer id="mainfooter">
+        <div id="GettoKnowUs">
+            
+            <ul>
+                <li>Get to Know Us</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Press Releases</li>
+                <li> Vivo Wave Science</li>
+                </ul>
+        </div>
+        <div id="ConnectwithUs">
+                <ul>
+                <li>Connect with Us</li>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                </ul>
+        </div> <div id="MakeMoneywithUs">
+             <ul>
+                <li>Make Money with Us</li>
+                <li>Sell on Vivo Wave </li>
+                <li>Sell under Vivo Wave Accelerator</li>
+                <li>Vivo Wave Global Selling</li>
+                <li>Fulfilment by Vivo Wave</li>
+                <li>Advertise Your Products</li>
+                <li>Vivo Wave Pay on Merchants</li>
+                </ul>
+        </div> <div id="GettoKnowUs">
+           <ul>
+            	
+                   <li>Let Us Help You</li>
+                   <li>COVID-19 and Vivo Wave </li>
+                   <li>Your Account</li>
+                   <li>Returns Centre</li>
+                   <li>100% Purchase Protection</li>
+                   <li>Vivo Wave  App Download</li>
+                   <li>Help</li>
+           </ul>
+        </div>
+     </footer>
+     <footer id="cridet">created by sk altamash</footer>
+
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+</html>
